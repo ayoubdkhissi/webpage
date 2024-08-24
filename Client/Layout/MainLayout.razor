@@ -1,0 +1,21 @@
+﻿@inherits LayoutComponentBase
+
+<!-- Sektion för bakgrundsbild och välkomsttext -->
+<div style="background-image: url('/images/banner.jpg'); background-size: cover; background-position: center; height: 300px; color: white;">
+    <div style="padding: 20px; text-align: center;">
+        <h1 style="margin: 0;">Romstads parkgata 4A, Karlstad</h1>
+        <p style="font-size: 1.2em;">Välkommen till ditt nya hem</p>
+    </div>
+</div>
+
+<!-- Klickbara gula knappar för navigation -->
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: -50px;">
+    <NavLink href="/" class="btn" style="background-color: #FFC107; color: black; padding: 15px 30px; font-size: 1.1em;">Hem</NavLink>
+    <NavLink href="serviceRequest" class="btn" style="background-color: #FFC107; color: black; padding: 15px 30px; font-size: 1.1em;">Felanmälan</NavLink>
+    <NavLink href="contact" class="btn" style="background-color: #FFC107; color: black; padding: 15px 30px; font-size: 1.1em;">Kontakt & Journummer</NavLink>
+    <NavLink href="housingQueue" class="btn" style="background-color: #FFC107; color: black; padding: 15px 30px; font-size: 1.1em;">Bostadskön</NavLink>
+</div>
+
+<div class="container" style="padding-top: 20px;">
+    @Body
+</div>
