@@ -3,10 +3,10 @@
 
 <PageTitle>Felanmälan</PageTitle>
 
-<div style="max-width: 600px; margin: auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-    <h1 style="text-align: center; color: #333;">Felanmälan</h1>
+<div class="form-container">
+    <h1 class="text-center rs-card-header">Felanmälan</h1>
 
-    <p style="font-size: 1.1em; color: #555; text-align: center;">
+    <p class="text-center rs-card-paragraph">
         Har du upptäckt något som behöver åtgärdas? Fyll i formuläret nedan och skicka in din felanmälan så återkommer vi så snart som möjligt.
     </p>
 
@@ -34,41 +34,13 @@
             <InputText id="phone" class="form-control" @bind-Value="felanmalanModel.Phone" placeholder="Ditt telefonnummer..." />
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Skicka felanmälan</button>
+        <button type="submit" class="btn btn-primary w-100 mt-4">Skicka felanmälan</button>
     </EditForm>
 
     @if (isSubmitted)
     {
-        <div class="alert alert-success" style="margin-top: 20px;">
+        <div class="alert alert-success mt-4">
             Tack för din felanmälan! Vi kommer att kontakta dig inom kort.
         </div>
     }
 </div>
-
-@code {
-    private FelanmalanModel felanmalanModel = new FelanmalanModel();
-    private bool isSubmitted = false;
-
-    private void SubmitFelanmälan()
-    {
-        // Här kan du lägga till kod för att hantera inlämning, t.ex. skicka till en server eller API
-        isSubmitted = true;
-    }
-
-    public class FelanmalanModel
-    {
-        [Required]
-        [StringLength(500, ErrorMessage = "Beskrivningen får inte vara längre än 500 tecken.")]
-        public string Description { get; set; }
-
-        [Required]
-        public string Name { get; set; }
-
-        [Required]
-        [EmailAddress(ErrorMessage = "Ange en giltig e-postadress.")]
-        public string Email { get; set; }
-
-        [Phone(ErrorMessage = "Ange ett giltigt telefonnummer.")]
-        public string Phone { get; set; }
-    }
-}

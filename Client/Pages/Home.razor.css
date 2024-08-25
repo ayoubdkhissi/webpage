@@ -1,0 +1,32 @@
+﻿.base-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.inner-container{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.home-title {
+    text-align: center;
+    color: #333;
+}
+
+.home-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.home-paragraph {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+}

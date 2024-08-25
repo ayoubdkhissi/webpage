@@ -3,10 +3,10 @@
 
 <PageTitle>Bostadskö</PageTitle>
 
-<div style="max-width: 600px; margin: auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-    <h1 style="text-align: center; color: #333;">Registrera dig i bostadskön</h1>
+<div class="card-container">
+    <h1 class="form-header">Registrera dig i bostadskön</h1>
 
-    <p style="font-size: 1.1em; color: #555; text-align: center;">
+    <p class="form-paragraph">
         Fyll i formuläret nedan för att ställa dig i bostadskön. Vi kontaktar dig så snart en lägenhet blir tillgänglig.
     </p>
 
@@ -41,7 +41,7 @@
             </InputSelect>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Registrera dig</button>
+        <button type="submit" class="btn btn-primary submit-btn">Registrera dig</button>
     </EditForm>
 
     @if (isSubmitted)
@@ -51,30 +51,3 @@
         </div>
     }
 </div>
-
-@code {
-    private BostadskoModel bostadskoModel = new BostadskoModel();
-    private bool isSubmitted = false;
-
-    private void SubmitBostadsko()
-    {
-        // Här kan du lägga till kod för att hantera inlämning, t.ex. skicka till en server eller API
-        isSubmitted = true;
-    }
-
-    public class BostadskoModel
-    {
-        [Required]
-        public string Name { get; set; }
-
-        [Required]
-        [EmailAddress(ErrorMessage = "Ange en giltig e-postadress.")]
-        public string Email { get; set; }
-
-        [Phone(ErrorMessage = "Ange ett giltigt telefonnummer.")]
-        public string Phone { get; set; }
-
-        [Required(ErrorMessage = "Välj önskad lägenhetsstorlek.")]
-        public string ApartmentSize { get; set; }
-    }
-}

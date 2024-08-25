@@ -1,0 +1,26 @@
+﻿.card-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    text-align: center;
+    color: #333;
+}
+
+.form-paragraph {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+}
+
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
