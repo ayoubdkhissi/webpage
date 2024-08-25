@@ -1,0 +1,27 @@
+
+.hero-section {
+    background-image: url('/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: white;
+}
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)
+}
+
+.navbar-container {
+    margin-top: -50px; /* Keeps the menu in the same spot as the yellow buttons */
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.1em; /* Same font size as the yellow buttons */
+    padding: 10px 20px; /* Adjust padding for better spacing on smaller screens */
+}
+
+
+.navbar-custom {
+    background-color: #FFC107;
+    margin: 0;
+    width: 100%;
+}
